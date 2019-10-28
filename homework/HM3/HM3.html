@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>HM3</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+
+<title>HM3_lc</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
 
 <style type="text/css">
     /*!
@@ -199,7 +204,6 @@ th {
   *:before,
   *:after {
     background: transparent !important;
-    color: #000 !important;
     box-shadow: none !important;
     text-shadow: none !important;
   }
@@ -6744,15 +6748,15 @@ button.close {
 *
 */
 /*!
- *  Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 /* FONT PATH
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('../components/font-awesome/fonts/fontawesome-webfont.eot?v=4.2.0');
-  src: url('../components/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.2.0') format('embedded-opentype'), url('../components/font-awesome/fonts/fontawesome-webfont.woff?v=4.2.0') format('woff'), url('../components/font-awesome/fonts/fontawesome-webfont.ttf?v=4.2.0') format('truetype'), url('../components/font-awesome/fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular') format('svg');
+  src: url('../components/font-awesome/fonts/fontawesome-webfont.eot?v=4.7.0');
+  src: url('../components/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../components/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../components/font-awesome/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../components/font-awesome/fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../components/font-awesome/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -6809,6 +6813,19 @@ button.close {
   border: solid 0.08em #eee;
   border-radius: .1em;
 }
+.fa-pull-left {
+  float: left;
+}
+.fa-pull-right {
+  float: right;
+}
+.fa.fa-pull-left {
+  margin-right: .3em;
+}
+.fa.fa-pull-right {
+  margin-left: .3em;
+}
+/* Deprecated as of 4.4.0 */
 .pull-right {
   float: right;
 }
@@ -6824,6 +6841,10 @@ button.close {
 .fa-spin {
   -webkit-animation: fa-spin 2s infinite linear;
   animation: fa-spin 2s infinite linear;
+}
+.fa-pulse {
+  -webkit-animation: fa-spin 1s infinite steps(8);
+  animation: fa-spin 1s infinite steps(8);
 }
 @-webkit-keyframes fa-spin {
   0% {
@@ -6846,31 +6867,31 @@ button.close {
   }
 }
 .fa-rotate-90 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 .fa-rotate-180 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 .fa-rotate-270 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
   -webkit-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
   transform: rotate(270deg);
 }
 .fa-flip-horizontal {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
   -webkit-transform: scale(-1, 1);
   -ms-transform: scale(-1, 1);
   transform: scale(-1, 1);
 }
 .fa-flip-vertical {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
   -webkit-transform: scale(1, -1);
   -ms-transform: scale(1, -1);
   transform: scale(1, -1);
@@ -7355,6 +7376,7 @@ button.close {
 .fa-twitter:before {
   content: "\f099";
 }
+.fa-facebook-f:before,
 .fa-facebook:before {
   content: "\f09a";
 }
@@ -7367,6 +7389,7 @@ button.close {
 .fa-credit-card:before {
   content: "\f09d";
 }
+.fa-feed:before,
 .fa-rss:before {
   content: "\f09e";
 }
@@ -8004,7 +8027,8 @@ button.close {
 .fa-male:before {
   content: "\f183";
 }
-.fa-gittip:before {
+.fa-gittip:before,
+.fa-gratipay:before {
   content: "\f184";
 }
 .fa-sun-o:before {
@@ -8108,7 +8132,7 @@ button.close {
 .fa-digg:before {
   content: "\f1a6";
 }
-.fa-pied-piper:before {
+.fa-pied-piper-pp:before {
   content: "\f1a7";
 }
 .fa-pied-piper-alt:before {
@@ -8234,6 +8258,7 @@ button.close {
   content: "\f1ce";
 }
 .fa-ra:before,
+.fa-resistance:before,
 .fa-rebel:before {
   content: "\f1d0";
 }
@@ -8247,6 +8272,8 @@ button.close {
 .fa-git:before {
   content: "\f1d3";
 }
+.fa-y-combinator-square:before,
+.fa-yc-square:before,
 .fa-hacker-news:before {
   content: "\f1d4";
 }
@@ -8414,6 +8441,657 @@ button.close {
 }
 .fa-meanpath:before {
   content: "\f20c";
+}
+.fa-buysellads:before {
+  content: "\f20d";
+}
+.fa-connectdevelop:before {
+  content: "\f20e";
+}
+.fa-dashcube:before {
+  content: "\f210";
+}
+.fa-forumbee:before {
+  content: "\f211";
+}
+.fa-leanpub:before {
+  content: "\f212";
+}
+.fa-sellsy:before {
+  content: "\f213";
+}
+.fa-shirtsinbulk:before {
+  content: "\f214";
+}
+.fa-simplybuilt:before {
+  content: "\f215";
+}
+.fa-skyatlas:before {
+  content: "\f216";
+}
+.fa-cart-plus:before {
+  content: "\f217";
+}
+.fa-cart-arrow-down:before {
+  content: "\f218";
+}
+.fa-diamond:before {
+  content: "\f219";
+}
+.fa-ship:before {
+  content: "\f21a";
+}
+.fa-user-secret:before {
+  content: "\f21b";
+}
+.fa-motorcycle:before {
+  content: "\f21c";
+}
+.fa-street-view:before {
+  content: "\f21d";
+}
+.fa-heartbeat:before {
+  content: "\f21e";
+}
+.fa-venus:before {
+  content: "\f221";
+}
+.fa-mars:before {
+  content: "\f222";
+}
+.fa-mercury:before {
+  content: "\f223";
+}
+.fa-intersex:before,
+.fa-transgender:before {
+  content: "\f224";
+}
+.fa-transgender-alt:before {
+  content: "\f225";
+}
+.fa-venus-double:before {
+  content: "\f226";
+}
+.fa-mars-double:before {
+  content: "\f227";
+}
+.fa-venus-mars:before {
+  content: "\f228";
+}
+.fa-mars-stroke:before {
+  content: "\f229";
+}
+.fa-mars-stroke-v:before {
+  content: "\f22a";
+}
+.fa-mars-stroke-h:before {
+  content: "\f22b";
+}
+.fa-neuter:before {
+  content: "\f22c";
+}
+.fa-genderless:before {
+  content: "\f22d";
+}
+.fa-facebook-official:before {
+  content: "\f230";
+}
+.fa-pinterest-p:before {
+  content: "\f231";
+}
+.fa-whatsapp:before {
+  content: "\f232";
+}
+.fa-server:before {
+  content: "\f233";
+}
+.fa-user-plus:before {
+  content: "\f234";
+}
+.fa-user-times:before {
+  content: "\f235";
+}
+.fa-hotel:before,
+.fa-bed:before {
+  content: "\f236";
+}
+.fa-viacoin:before {
+  content: "\f237";
+}
+.fa-train:before {
+  content: "\f238";
+}
+.fa-subway:before {
+  content: "\f239";
+}
+.fa-medium:before {
+  content: "\f23a";
+}
+.fa-yc:before,
+.fa-y-combinator:before {
+  content: "\f23b";
+}
+.fa-optin-monster:before {
+  content: "\f23c";
+}
+.fa-opencart:before {
+  content: "\f23d";
+}
+.fa-expeditedssl:before {
+  content: "\f23e";
+}
+.fa-battery-4:before,
+.fa-battery:before,
+.fa-battery-full:before {
+  content: "\f240";
+}
+.fa-battery-3:before,
+.fa-battery-three-quarters:before {
+  content: "\f241";
+}
+.fa-battery-2:before,
+.fa-battery-half:before {
+  content: "\f242";
+}
+.fa-battery-1:before,
+.fa-battery-quarter:before {
+  content: "\f243";
+}
+.fa-battery-0:before,
+.fa-battery-empty:before {
+  content: "\f244";
+}
+.fa-mouse-pointer:before {
+  content: "\f245";
+}
+.fa-i-cursor:before {
+  content: "\f246";
+}
+.fa-object-group:before {
+  content: "\f247";
+}
+.fa-object-ungroup:before {
+  content: "\f248";
+}
+.fa-sticky-note:before {
+  content: "\f249";
+}
+.fa-sticky-note-o:before {
+  content: "\f24a";
+}
+.fa-cc-jcb:before {
+  content: "\f24b";
+}
+.fa-cc-diners-club:before {
+  content: "\f24c";
+}
+.fa-clone:before {
+  content: "\f24d";
+}
+.fa-balance-scale:before {
+  content: "\f24e";
+}
+.fa-hourglass-o:before {
+  content: "\f250";
+}
+.fa-hourglass-1:before,
+.fa-hourglass-start:before {
+  content: "\f251";
+}
+.fa-hourglass-2:before,
+.fa-hourglass-half:before {
+  content: "\f252";
+}
+.fa-hourglass-3:before,
+.fa-hourglass-end:before {
+  content: "\f253";
+}
+.fa-hourglass:before {
+  content: "\f254";
+}
+.fa-hand-grab-o:before,
+.fa-hand-rock-o:before {
+  content: "\f255";
+}
+.fa-hand-stop-o:before,
+.fa-hand-paper-o:before {
+  content: "\f256";
+}
+.fa-hand-scissors-o:before {
+  content: "\f257";
+}
+.fa-hand-lizard-o:before {
+  content: "\f258";
+}
+.fa-hand-spock-o:before {
+  content: "\f259";
+}
+.fa-hand-pointer-o:before {
+  content: "\f25a";
+}
+.fa-hand-peace-o:before {
+  content: "\f25b";
+}
+.fa-trademark:before {
+  content: "\f25c";
+}
+.fa-registered:before {
+  content: "\f25d";
+}
+.fa-creative-commons:before {
+  content: "\f25e";
+}
+.fa-gg:before {
+  content: "\f260";
+}
+.fa-gg-circle:before {
+  content: "\f261";
+}
+.fa-tripadvisor:before {
+  content: "\f262";
+}
+.fa-odnoklassniki:before {
+  content: "\f263";
+}
+.fa-odnoklassniki-square:before {
+  content: "\f264";
+}
+.fa-get-pocket:before {
+  content: "\f265";
+}
+.fa-wikipedia-w:before {
+  content: "\f266";
+}
+.fa-safari:before {
+  content: "\f267";
+}
+.fa-chrome:before {
+  content: "\f268";
+}
+.fa-firefox:before {
+  content: "\f269";
+}
+.fa-opera:before {
+  content: "\f26a";
+}
+.fa-internet-explorer:before {
+  content: "\f26b";
+}
+.fa-tv:before,
+.fa-television:before {
+  content: "\f26c";
+}
+.fa-contao:before {
+  content: "\f26d";
+}
+.fa-500px:before {
+  content: "\f26e";
+}
+.fa-amazon:before {
+  content: "\f270";
+}
+.fa-calendar-plus-o:before {
+  content: "\f271";
+}
+.fa-calendar-minus-o:before {
+  content: "\f272";
+}
+.fa-calendar-times-o:before {
+  content: "\f273";
+}
+.fa-calendar-check-o:before {
+  content: "\f274";
+}
+.fa-industry:before {
+  content: "\f275";
+}
+.fa-map-pin:before {
+  content: "\f276";
+}
+.fa-map-signs:before {
+  content: "\f277";
+}
+.fa-map-o:before {
+  content: "\f278";
+}
+.fa-map:before {
+  content: "\f279";
+}
+.fa-commenting:before {
+  content: "\f27a";
+}
+.fa-commenting-o:before {
+  content: "\f27b";
+}
+.fa-houzz:before {
+  content: "\f27c";
+}
+.fa-vimeo:before {
+  content: "\f27d";
+}
+.fa-black-tie:before {
+  content: "\f27e";
+}
+.fa-fonticons:before {
+  content: "\f280";
+}
+.fa-reddit-alien:before {
+  content: "\f281";
+}
+.fa-edge:before {
+  content: "\f282";
+}
+.fa-credit-card-alt:before {
+  content: "\f283";
+}
+.fa-codiepie:before {
+  content: "\f284";
+}
+.fa-modx:before {
+  content: "\f285";
+}
+.fa-fort-awesome:before {
+  content: "\f286";
+}
+.fa-usb:before {
+  content: "\f287";
+}
+.fa-product-hunt:before {
+  content: "\f288";
+}
+.fa-mixcloud:before {
+  content: "\f289";
+}
+.fa-scribd:before {
+  content: "\f28a";
+}
+.fa-pause-circle:before {
+  content: "\f28b";
+}
+.fa-pause-circle-o:before {
+  content: "\f28c";
+}
+.fa-stop-circle:before {
+  content: "\f28d";
+}
+.fa-stop-circle-o:before {
+  content: "\f28e";
+}
+.fa-shopping-bag:before {
+  content: "\f290";
+}
+.fa-shopping-basket:before {
+  content: "\f291";
+}
+.fa-hashtag:before {
+  content: "\f292";
+}
+.fa-bluetooth:before {
+  content: "\f293";
+}
+.fa-bluetooth-b:before {
+  content: "\f294";
+}
+.fa-percent:before {
+  content: "\f295";
+}
+.fa-gitlab:before {
+  content: "\f296";
+}
+.fa-wpbeginner:before {
+  content: "\f297";
+}
+.fa-wpforms:before {
+  content: "\f298";
+}
+.fa-envira:before {
+  content: "\f299";
+}
+.fa-universal-access:before {
+  content: "\f29a";
+}
+.fa-wheelchair-alt:before {
+  content: "\f29b";
+}
+.fa-question-circle-o:before {
+  content: "\f29c";
+}
+.fa-blind:before {
+  content: "\f29d";
+}
+.fa-audio-description:before {
+  content: "\f29e";
+}
+.fa-volume-control-phone:before {
+  content: "\f2a0";
+}
+.fa-braille:before {
+  content: "\f2a1";
+}
+.fa-assistive-listening-systems:before {
+  content: "\f2a2";
+}
+.fa-asl-interpreting:before,
+.fa-american-sign-language-interpreting:before {
+  content: "\f2a3";
+}
+.fa-deafness:before,
+.fa-hard-of-hearing:before,
+.fa-deaf:before {
+  content: "\f2a4";
+}
+.fa-glide:before {
+  content: "\f2a5";
+}
+.fa-glide-g:before {
+  content: "\f2a6";
+}
+.fa-signing:before,
+.fa-sign-language:before {
+  content: "\f2a7";
+}
+.fa-low-vision:before {
+  content: "\f2a8";
+}
+.fa-viadeo:before {
+  content: "\f2a9";
+}
+.fa-viadeo-square:before {
+  content: "\f2aa";
+}
+.fa-snapchat:before {
+  content: "\f2ab";
+}
+.fa-snapchat-ghost:before {
+  content: "\f2ac";
+}
+.fa-snapchat-square:before {
+  content: "\f2ad";
+}
+.fa-pied-piper:before {
+  content: "\f2ae";
+}
+.fa-first-order:before {
+  content: "\f2b0";
+}
+.fa-yoast:before {
+  content: "\f2b1";
+}
+.fa-themeisle:before {
+  content: "\f2b2";
+}
+.fa-google-plus-circle:before,
+.fa-google-plus-official:before {
+  content: "\f2b3";
+}
+.fa-fa:before,
+.fa-font-awesome:before {
+  content: "\f2b4";
+}
+.fa-handshake-o:before {
+  content: "\f2b5";
+}
+.fa-envelope-open:before {
+  content: "\f2b6";
+}
+.fa-envelope-open-o:before {
+  content: "\f2b7";
+}
+.fa-linode:before {
+  content: "\f2b8";
+}
+.fa-address-book:before {
+  content: "\f2b9";
+}
+.fa-address-book-o:before {
+  content: "\f2ba";
+}
+.fa-vcard:before,
+.fa-address-card:before {
+  content: "\f2bb";
+}
+.fa-vcard-o:before,
+.fa-address-card-o:before {
+  content: "\f2bc";
+}
+.fa-user-circle:before {
+  content: "\f2bd";
+}
+.fa-user-circle-o:before {
+  content: "\f2be";
+}
+.fa-user-o:before {
+  content: "\f2c0";
+}
+.fa-id-badge:before {
+  content: "\f2c1";
+}
+.fa-drivers-license:before,
+.fa-id-card:before {
+  content: "\f2c2";
+}
+.fa-drivers-license-o:before,
+.fa-id-card-o:before {
+  content: "\f2c3";
+}
+.fa-quora:before {
+  content: "\f2c4";
+}
+.fa-free-code-camp:before {
+  content: "\f2c5";
+}
+.fa-telegram:before {
+  content: "\f2c6";
+}
+.fa-thermometer-4:before,
+.fa-thermometer:before,
+.fa-thermometer-full:before {
+  content: "\f2c7";
+}
+.fa-thermometer-3:before,
+.fa-thermometer-three-quarters:before {
+  content: "\f2c8";
+}
+.fa-thermometer-2:before,
+.fa-thermometer-half:before {
+  content: "\f2c9";
+}
+.fa-thermometer-1:before,
+.fa-thermometer-quarter:before {
+  content: "\f2ca";
+}
+.fa-thermometer-0:before,
+.fa-thermometer-empty:before {
+  content: "\f2cb";
+}
+.fa-shower:before {
+  content: "\f2cc";
+}
+.fa-bathtub:before,
+.fa-s15:before,
+.fa-bath:before {
+  content: "\f2cd";
+}
+.fa-podcast:before {
+  content: "\f2ce";
+}
+.fa-window-maximize:before {
+  content: "\f2d0";
+}
+.fa-window-minimize:before {
+  content: "\f2d1";
+}
+.fa-window-restore:before {
+  content: "\f2d2";
+}
+.fa-times-rectangle:before,
+.fa-window-close:before {
+  content: "\f2d3";
+}
+.fa-times-rectangle-o:before,
+.fa-window-close-o:before {
+  content: "\f2d4";
+}
+.fa-bandcamp:before {
+  content: "\f2d5";
+}
+.fa-grav:before {
+  content: "\f2d6";
+}
+.fa-etsy:before {
+  content: "\f2d7";
+}
+.fa-imdb:before {
+  content: "\f2d8";
+}
+.fa-ravelry:before {
+  content: "\f2d9";
+}
+.fa-eercast:before {
+  content: "\f2da";
+}
+.fa-microchip:before {
+  content: "\f2db";
+}
+.fa-snowflake-o:before {
+  content: "\f2dc";
+}
+.fa-superpowers:before {
+  content: "\f2dd";
+}
+.fa-wpexplorer:before {
+  content: "\f2de";
+}
+.fa-meetup:before {
+  content: "\f2e0";
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
 }
 /*!
 *
@@ -8694,6 +9372,10 @@ div.traceback-wrapper {
   max-width: 800px;
   margin: auto;
 }
+div.traceback-wrapper pre.traceback {
+  max-height: 600px;
+  overflow: auto;
+}
 /**
  * Primary styles
  *
@@ -8719,6 +9401,10 @@ body > #header {
   z-index: 100;
 }
 body > #header #header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
   padding-bottom: 5px;
   padding-top: 5px;
   box-sizing: border-box;
@@ -8750,13 +9436,16 @@ body > #header .header-bar {
   padding-top: 1px;
   padding-bottom: 1px;
 }
-@media (max-width: 991px) {
-  #ipython_notebook {
-    margin-left: 10px;
-  }
-}
 [dir="rtl"] #ipython_notebook {
+  margin-right: 10px;
+  margin-left: 0;
+}
+[dir="rtl"] #ipython_notebook.pull-left {
   float: right !important;
+  float: right;
+}
+.flex-spacer {
+  flex: 1;
 }
 #noscript {
   width: auto;
@@ -8791,8 +9480,14 @@ body > #header .header-bar {
 input.ui-button {
   padding: 0.3em 0.9em;
 }
+span#kernel_logo_widget {
+  margin: 0 10px;
+}
 span#login_widget {
   float: right;
+}
+[dir="rtl"] span#login_widget {
+  float: left;
 }
 span#login_widget > .button,
 #logout {
@@ -8908,6 +9603,9 @@ span#login_widget > .button .badge,
   overflow: auto;
   flex: 1;
 }
+.modal-header {
+  cursor: move;
+}
 @media (min-width: 768px) {
   .modal .modal-dialog {
     width: 700px;
@@ -8928,6 +9626,19 @@ span#login_widget > .button .badge,
   display: inline-block;
   margin-bottom: -4px;
 }
+[dir="rtl"] .center-nav form.pull-left {
+  float: right !important;
+  float: right;
+}
+[dir="rtl"] .center-nav .navbar-text {
+  float: right;
+}
+[dir="rtl"] .navbar-inner {
+  text-align: right;
+}
+[dir="rtl"] div.text-left {
+  text-align: right;
+}
 /*!
 *
 * IPython tree view
@@ -8944,34 +9655,42 @@ span#login_widget > .button .badge,
   margin: 0;
 }
 .alternate_upload input.fileinput {
-  text-align: center;
-  vertical-align: middle;
-  display: inline;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: pointer;
   opacity: 0;
   z-index: 2;
-  width: 12ex;
-  margin-right: -12ex;
+}
+.alternate_upload .btn-xs > input.fileinput {
+  margin: -1px -5px;
 }
 .alternate_upload .btn-upload {
+  position: relative;
   height: 22px;
+}
+::-webkit-file-upload-button {
+  cursor: pointer;
 }
 /**
  * Primary styles
  *
  * Author: Jupyter Development Team
  */
-[dir="rtl"] #tabs li {
-  float: right;
-}
 ul#tabs {
   margin-bottom: 4px;
-}
-[dir="rtl"] ul#tabs {
-  margin-right: 0px;
 }
 ul#tabs a {
   padding-top: 6px;
   padding-bottom: 4px;
+}
+[dir="rtl"] ul#tabs.nav-tabs > li {
+  float: right;
+}
+[dir="rtl"] ul#tabs.nav.nav-tabs {
+  padding-right: 0;
 }
 ul.breadcrumb a:focus,
 ul.breadcrumb a:hover {
@@ -8991,15 +9710,13 @@ ul.breadcrumb span {
 .list_toolbar .tree-buttons {
   padding-top: 1px;
 }
-[dir="rtl"] .list_toolbar .tree-buttons {
+[dir="rtl"] .list_toolbar .tree-buttons .pull-right {
   float: left !important;
+  float: left;
 }
-[dir="rtl"] .list_toolbar .pull-right {
-  padding-top: 1px;
-  float: left !important;
-}
-[dir="rtl"] .list_toolbar .pull-left {
-  float: right !important;
+[dir="rtl"] .list_toolbar .col-sm-4,
+[dir="rtl"] .list_toolbar .col-sm-8 {
+  float: right;
 }
 .dynamic-buttons {
   padding-top: 3px;
@@ -9055,7 +9772,7 @@ ul.breadcrumb span {
 .list_item > div input {
   margin-right: 7px;
   margin-left: 14px;
-  vertical-align: baseline;
+  vertical-align: text-bottom;
   line-height: 22px;
   position: relative;
   top: -1px;
@@ -9065,6 +9782,9 @@ ul.breadcrumb span {
   margin-left: -1px;
   vertical-align: baseline;
   line-height: 22px;
+}
+[dir="rtl"] .list_item > div input {
+  margin-right: 0;
 }
 .new-file input[type=checkbox] {
   visibility: hidden;
@@ -9080,6 +9800,14 @@ ul.breadcrumb span {
   margin-left: 7px;
   line-height: 22px;
   vertical-align: baseline;
+}
+.item_modified {
+  margin-right: 7px;
+  margin-left: 7px;
+}
+[dir="rtl"] .item_modified.pull-right {
+  float: left !important;
+  float: left;
 }
 .item_buttons {
   line-height: 1em;
@@ -9108,6 +9836,14 @@ ul.breadcrumb span {
   margin-right: 7px;
   float: left;
 }
+[dir="rtl"] .item_buttons.pull-right {
+  float: left !important;
+  float: left;
+}
+[dir="rtl"] .item_buttons .kernel-name {
+  margin-left: 7px;
+  float: right;
+}
 .toolbar_info {
   height: 24px;
   line-height: 24px;
@@ -9133,18 +9869,32 @@ ul.breadcrumb span {
   background-color: transparent;
   font-weight: bold;
 }
+.sort_button {
+  display: inline-block;
+  padding-left: 7px;
+}
+[dir="rtl"] .sort_button.pull-right {
+  float: left !important;
+  float: left;
+}
 #tree-selector {
   padding-right: 0px;
-}
-[dir="rtl"] #tree-selector a {
-  float: right;
 }
 #button-select-all {
   min-width: 50px;
 }
+[dir="rtl"] #button-select-all.btn {
+  float: right ;
+}
 #select-all {
   margin-left: 7px;
   margin-right: 2px;
+  margin-top: 2px;
+  height: 16px;
+}
+[dir="rtl"] #select-all.pull-left {
+  float: right !important;
+  float: right;
 }
 .menu_icon {
   margin-right: 2px;
@@ -9162,6 +9912,12 @@ ul.breadcrumb span {
   -moz-osx-font-smoothing: grayscale;
   content: "\f114";
 }
+.folder_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.folder_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .folder_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -9178,6 +9934,12 @@ ul.breadcrumb span {
   content: "\f02d";
   position: relative;
   top: -1px;
+}
+.notebook_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.notebook_icon:before.fa-pull-right {
+  margin-left: .3em;
 }
 .notebook_icon:before.pull-left {
   margin-right: .3em;
@@ -9197,6 +9959,12 @@ ul.breadcrumb span {
   top: -1px;
   color: #5cb85c;
 }
+.running_notebook_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.running_notebook_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .running_notebook_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -9214,6 +9982,12 @@ ul.breadcrumb span {
   position: relative;
   top: -2px;
 }
+.file_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.file_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .file_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -9228,8 +10002,11 @@ ul#new-menu {
   left: auto;
   right: 0;
 }
-[dir="rtl"] #new-menu {
-  text-align: right;
+#new-menu .dropdown-header {
+  font-size: 10px;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 0 0 3px;
+  margin: -3px 20px 0;
 }
 .kernel-menu-icon {
   padding-right: 12px;
@@ -9276,9 +10053,6 @@ ul#new-menu {
 #running .panel-group .panel .panel-body .list_container .list_item:last-child {
   border-bottom: 0px;
 }
-[dir="rtl"] #running .col-sm-8 {
-  float: right !important;
-}
 .delete-button {
   display: none;
 }
@@ -9286,6 +10060,12 @@ ul#new-menu {
   display: none;
 }
 .rename-button {
+  display: none;
+}
+.move-button {
+  display: none;
+}
+.download-button {
   display: none;
 }
 .shutdown-button {
@@ -9328,6 +10108,12 @@ ul#new-menu {
   -moz-osx-font-smoothing: grayscale;
   width: 20px;
 }
+.dirty-indicator.fa-pull-left {
+  margin-right: .3em;
+}
+.dirty-indicator.fa-pull-right {
+  margin-left: .3em;
+}
 .dirty-indicator.pull-left {
   margin-right: .3em;
 }
@@ -9342,6 +10128,12 @@ ul#new-menu {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 20px;
+}
+.dirty-indicator-dirty.fa-pull-left {
+  margin-right: .3em;
+}
+.dirty-indicator-dirty.fa-pull-right {
+  margin-left: .3em;
 }
 .dirty-indicator-dirty.pull-left {
   margin-right: .3em;
@@ -9358,6 +10150,12 @@ ul#new-menu {
   -moz-osx-font-smoothing: grayscale;
   width: 20px;
 }
+.dirty-indicator-clean.fa-pull-left {
+  margin-right: .3em;
+}
+.dirty-indicator-clean.fa-pull-right {
+  margin-left: .3em;
+}
 .dirty-indicator-clean.pull-left {
   margin-right: .3em;
 }
@@ -9372,6 +10170,12 @@ ul#new-menu {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f00c";
+}
+.dirty-indicator-clean:before.fa-pull-left {
+  margin-right: .3em;
+}
+.dirty-indicator-clean:before.fa-pull-right {
+  margin-left: .3em;
 }
 .dirty-indicator-clean:before.pull-left {
   margin-right: .3em;
@@ -9417,14 +10221,132 @@ ul#new-menu {
     box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.2);
   }
 }
+.CodeMirror-dialog {
+  background-color: #fff;
+}
 /*!
 *
 * IPython notebook
 *
 */
-/* CSS font colors for translated ANSI colors. */
+/* CSS font colors for translated ANSI escape sequences */
+/* The color values are a mix of
+   http://www.xcolors.net/dl/baskerville-ivorylight and
+   http://www.xcolors.net/dl/euphrasia */
+.ansi-black-fg {
+  color: #3E424D;
+}
+.ansi-black-bg {
+  background-color: #3E424D;
+}
+.ansi-black-intense-fg {
+  color: #282C36;
+}
+.ansi-black-intense-bg {
+  background-color: #282C36;
+}
+.ansi-red-fg {
+  color: #E75C58;
+}
+.ansi-red-bg {
+  background-color: #E75C58;
+}
+.ansi-red-intense-fg {
+  color: #B22B31;
+}
+.ansi-red-intense-bg {
+  background-color: #B22B31;
+}
+.ansi-green-fg {
+  color: #00A250;
+}
+.ansi-green-bg {
+  background-color: #00A250;
+}
+.ansi-green-intense-fg {
+  color: #007427;
+}
+.ansi-green-intense-bg {
+  background-color: #007427;
+}
+.ansi-yellow-fg {
+  color: #DDB62B;
+}
+.ansi-yellow-bg {
+  background-color: #DDB62B;
+}
+.ansi-yellow-intense-fg {
+  color: #B27D12;
+}
+.ansi-yellow-intense-bg {
+  background-color: #B27D12;
+}
+.ansi-blue-fg {
+  color: #208FFB;
+}
+.ansi-blue-bg {
+  background-color: #208FFB;
+}
+.ansi-blue-intense-fg {
+  color: #0065CA;
+}
+.ansi-blue-intense-bg {
+  background-color: #0065CA;
+}
+.ansi-magenta-fg {
+  color: #D160C4;
+}
+.ansi-magenta-bg {
+  background-color: #D160C4;
+}
+.ansi-magenta-intense-fg {
+  color: #A03196;
+}
+.ansi-magenta-intense-bg {
+  background-color: #A03196;
+}
+.ansi-cyan-fg {
+  color: #60C6C8;
+}
+.ansi-cyan-bg {
+  background-color: #60C6C8;
+}
+.ansi-cyan-intense-fg {
+  color: #258F8F;
+}
+.ansi-cyan-intense-bg {
+  background-color: #258F8F;
+}
+.ansi-white-fg {
+  color: #C5C1B4;
+}
+.ansi-white-bg {
+  background-color: #C5C1B4;
+}
+.ansi-white-intense-fg {
+  color: #A1A6B2;
+}
+.ansi-white-intense-bg {
+  background-color: #A1A6B2;
+}
+.ansi-default-inverse-fg {
+  color: #FFFFFF;
+}
+.ansi-default-inverse-bg {
+  background-color: #000000;
+}
+.ansi-bold {
+  font-weight: bold;
+}
+.ansi-underline {
+  text-decoration: underline;
+}
+/* The following styles are deprecated an will be removed in a future version */
 .ansibold {
   font-weight: bold;
+}
+.ansi-inverse {
+  outline: 0.5px dotted;
 }
 /* use dark versions for foreground, to improve visibility */
 .ansiblack {
@@ -9503,12 +10425,20 @@ div.cell {
   /* This acts as a spacer between cells, that is outside the border */
   margin: 0px;
   outline: none;
-  border-left-width: 1px;
-  padding-left: 5px;
-  background: linear-gradient(to right, transparent -40px, transparent 1px, transparent 1px, transparent 100%);
+  position: relative;
+  overflow: visible;
+}
+div.cell:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: transparent;
 }
 div.cell.jupyter-soft-selected {
-  border-left-color: #90CAF9;
   border-left-color: #E3F2FD;
   border-left-width: 1px;
   padding-left: 5px;
@@ -9521,27 +10451,39 @@ div.cell.jupyter-soft-selected {
     border-color: transparent;
   }
 }
-div.cell.selected {
+div.cell.selected,
+div.cell.selected.jupyter-soft-selected {
   border-color: #ababab;
-  border-left-width: 0px;
-  padding-left: 6px;
-  background: linear-gradient(to right, #42A5F5 -40px, #42A5F5 5px, transparent 5px, transparent 100%);
+}
+div.cell.selected:before,
+div.cell.selected.jupyter-soft-selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #42A5F5;
 }
 @media print {
-  div.cell.selected {
+  div.cell.selected,
+  div.cell.selected.jupyter-soft-selected {
     border-color: transparent;
   }
 }
-div.cell.selected.jupyter-soft-selected {
-  border-left-width: 0;
-  padding-left: 6px;
-  background: linear-gradient(to right, #42A5F5 -40px, #42A5F5 7px, #E3F2FD 7px, #E3F2FD 100%);
-}
 .edit_mode div.cell.selected {
   border-color: #66BB6A;
-  border-left-width: 0px;
-  padding-left: 6px;
-  background: linear-gradient(to right, #66BB6A -40px, #66BB6A 5px, transparent 5px, transparent 100%);
+}
+.edit_mode div.cell.selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #66BB6A;
 }
 @media print {
   .edit_mode div.cell.selected {
@@ -9737,7 +10679,9 @@ div.input_area > div.highlight > pre {
 .CodeMirror-lines {
   /* In CM2, this used to be 0.4em, but in CM3 it went to 4px. We need the em value because */
   /* we have set a different line-height and want this to scale with that. */
-  padding: 0.4em;
+  /* Note that this should set vertical padding only, since CodeMirror assumes
+       that horizontal padding will be set on CodeMirror pre */
+  padding: 0.4em 0;
 }
 .CodeMirror-linenumber {
   padding: 0 8px 0 4px;
@@ -9747,11 +10691,24 @@ div.input_area > div.highlight > pre {
   border-top-left-radius: 2px;
 }
 .CodeMirror pre {
-  /* In CM3 this went to 4px from 0 in CM2. We need the 0 value because of how we size */
-  /* .CodeMirror-lines */
-  padding: 0;
+  /* In CM3 this went to 4px from 0 in CM2. This sets horizontal padding only,
+    use .CodeMirror-lines for vertical */
+  padding: 0 0.4em;
   border: 0;
   border-radius: 0;
+}
+.CodeMirror-cursor {
+  border-left: 1.4px solid black;
+}
+@media screen and (min-width: 2138px) and (max-width: 4319px) {
+  .CodeMirror-cursor {
+    border-left: 2px solid black;
+  }
+}
+@media screen and (min-width: 4320px) {
+  .CodeMirror-cursor {
+    border-left: 4px solid black;
+  }
 }
 /*
 
@@ -10005,6 +10962,9 @@ div.output_area img.unconfined,
 div.output_area svg.unconfined {
   max-width: none;
 }
+div.output_area .mglyph > img {
+  max-width: none;
+}
 /* This is needed to protect the pre formating from global settings such
    as that of bootstrap */
 .output {
@@ -10043,7 +11003,7 @@ div.output_area svg.unconfined {
 }
 div.output_area pre {
   margin: 0;
-  padding: 0;
+  padding: 1px 0 1px 0;
   border: 0;
   vertical-align: baseline;
   color: black;
@@ -10203,39 +11163,35 @@ div.output_unrecognized a:hover {
 .rendered_html h6:first-child {
   margin-top: 1em;
 }
+.rendered_html ul:not(.list-inline),
+.rendered_html ol:not(.list-inline) {
+  padding-left: 2em;
+}
 .rendered_html ul {
   list-style: disc;
-  margin: 0em 2em;
-  padding-left: 0px;
 }
 .rendered_html ul ul {
   list-style: square;
-  margin: 0em 2em;
+  margin-top: 0;
 }
 .rendered_html ul ul ul {
   list-style: circle;
-  margin: 0em 2em;
 }
 .rendered_html ol {
   list-style: decimal;
-  margin: 0em 2em;
-  padding-left: 0px;
 }
 .rendered_html ol ol {
   list-style: upper-alpha;
-  margin: 0em 2em;
+  margin-top: 0;
 }
 .rendered_html ol ol ol {
   list-style: lower-alpha;
-  margin: 0em 2em;
 }
 .rendered_html ol ol ol ol {
   list-style: lower-roman;
-  margin: 0em 2em;
 }
 .rendered_html ol ol ol ol ol {
   list-style: decimal;
-  margin: 0em 2em;
 }
 .rendered_html * + ul {
   margin-top: 1em;
@@ -10249,14 +11205,23 @@ div.output_unrecognized a:hover {
 }
 .rendered_html pre {
   margin: 1em 2em;
+  padding: 0px;
+  background-color: #fff;
+}
+.rendered_html code {
+  background-color: #eff0f1;
+}
+.rendered_html p code {
+  padding: 1px 5px;
+}
+.rendered_html pre code {
+  background-color: #fff;
 }
 .rendered_html pre,
 .rendered_html code {
   border: 0;
-  background-color: #fff;
   color: #000;
   font-size: 100%;
-  padding: 0px;
 }
 .rendered_html blockquote {
   margin: 1em 2em;
@@ -10264,24 +11229,36 @@ div.output_unrecognized a:hover {
 .rendered_html table {
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid black;
+  border: none;
   border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
 }
 .rendered_html tr,
 .rendered_html th,
 .rendered_html td {
-  border: 1px solid black;
-  border-collapse: collapse;
-  margin: 1em 2em;
-}
-.rendered_html td,
-.rendered_html th {
-  text-align: left;
+  text-align: right;
   vertical-align: middle;
-  padding: 4px;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
 }
 .rendered_html th {
   font-weight: bold;
+}
+.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
 }
 .rendered_html * + table {
   margin-top: 1em;
@@ -10308,6 +11285,15 @@ div.output_unrecognized a:hover {
 .rendered_html img.unconfined,
 .rendered_html svg.unconfined {
   max-width: none;
+}
+.rendered_html .alert {
+  margin-bottom: initial;
+}
+.rendered_html * + .alert {
+  margin-top: 1em;
+}
+[dir="rtl"] .rendered_html p {
+  text-align: right;
 }
 div.text_cell {
   /* Old browsers */
@@ -10362,8 +11348,17 @@ h6:hover .anchor-link {
   overflow-x: auto;
   overflow-y: hidden;
 }
+.text_cell.rendered .rendered_html tr,
+.text_cell.rendered .rendered_html th,
+.text_cell.rendered .rendered_html td {
+  max-width: none;
+}
 .text_cell.unrendered .text_cell_render {
   display: none;
+}
+.text_cell .dropzone .input_area {
+  border: 2px dashed #bababa;
+  margin: -1px;
 }
 .cm-header-1,
 .cm-header-2,
@@ -10500,6 +11495,28 @@ kbd {
   padding-top: 1px;
   padding-bottom: 1px;
 }
+.jupyter-keybindings {
+  padding: 1px;
+  line-height: 24px;
+  border-bottom: 1px solid gray;
+}
+.jupyter-keybindings input {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.jupyter-keybindings i {
+  padding: 6px;
+}
+.well code {
+  background-color: #ffffff;
+  border-color: #ababab;
+  border-width: 1px;
+  border-style: solid;
+  padding: 2px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
 /* CSS for the cell toolbar */
 .celltoolbar {
   border: thin solid #CFCFCF;
@@ -10632,6 +11649,152 @@ select[multiple].celltoolbar select {
   margin-left: 5px;
   margin-right: 5px;
 }
+.tags_button_container {
+  width: 100%;
+  display: flex;
+}
+.tag-container {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  overflow: hidden;
+  position: relative;
+}
+.tag-container > * {
+  margin: 0 4px;
+}
+.remove-tag-btn {
+  margin-left: 4px;
+}
+.tags-input {
+  display: flex;
+}
+.cell-tag:last-child:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 40px;
+  height: 100%;
+  /* Fade to background color of cell toolbar */
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), #EEE);
+}
+.tags-input > * {
+  margin-left: 4px;
+}
+.cell-tag,
+.tags-input input,
+.tags-input button {
+  display: block;
+  width: 100%;
+  height: 32px;
+  padding: 6px 12px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 1px;
+  box-shadow: none;
+  width: inherit;
+  font-size: inherit;
+  height: 22px;
+  line-height: 22px;
+  padding: 0px 4px;
+  display: inline-block;
+}
+.cell-tag:focus,
+.tags-input input:focus,
+.tags-input button:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.cell-tag::-moz-placeholder,
+.tags-input input::-moz-placeholder,
+.tags-input button::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+.cell-tag:-ms-input-placeholder,
+.tags-input input:-ms-input-placeholder,
+.tags-input button:-ms-input-placeholder {
+  color: #999;
+}
+.cell-tag::-webkit-input-placeholder,
+.tags-input input::-webkit-input-placeholder,
+.tags-input button::-webkit-input-placeholder {
+  color: #999;
+}
+.cell-tag::-ms-expand,
+.tags-input input::-ms-expand,
+.tags-input button::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+.cell-tag[disabled],
+.tags-input input[disabled],
+.tags-input button[disabled],
+.cell-tag[readonly],
+.tags-input input[readonly],
+.tags-input button[readonly],
+fieldset[disabled] .cell-tag,
+fieldset[disabled] .tags-input input,
+fieldset[disabled] .tags-input button {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+.cell-tag[disabled],
+.tags-input input[disabled],
+.tags-input button[disabled],
+fieldset[disabled] .cell-tag,
+fieldset[disabled] .tags-input input,
+fieldset[disabled] .tags-input button {
+  cursor: not-allowed;
+}
+textarea.cell-tag,
+textarea.tags-input input,
+textarea.tags-input button {
+  height: auto;
+}
+select.cell-tag,
+select.tags-input input,
+select.tags-input button {
+  height: 30px;
+  line-height: 30px;
+}
+textarea.cell-tag,
+textarea.tags-input input,
+textarea.tags-input button,
+select[multiple].cell-tag,
+select[multiple].tags-input input,
+select[multiple].tags-input button {
+  height: auto;
+}
+.cell-tag,
+.tags-input button {
+  padding: 0px 4px;
+}
+.cell-tag {
+  background-color: #fff;
+  white-space: nowrap;
+}
+.tags-input input[type=text]:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: #ccc;
+}
 .completions {
   position: absolute;
   z-index: 110;
@@ -10657,16 +11820,28 @@ select[multiple].celltoolbar select {
 .completions select option.context {
   color: #286090;
 }
-#kernel_logo_widget {
-  float: right !important;
-  float: right;
-}
 #kernel_logo_widget .current_kernel_logo {
   display: none;
   margin-top: -1px;
   margin-bottom: -1px;
   width: 32px;
   height: 32px;
+}
+[dir="rtl"] #kernel_logo_widget {
+  float: left !important;
+  float: left;
+}
+.modal .modal-body .move-path {
+  display: flex;
+  flex-direction: row;
+  justify-content: space;
+  align-items: center;
+}
+.modal .modal-body .move-path .server-root {
+  padding-right: 20px;
+}
+.modal .modal-body .move-path .path-input {
+  flex: 1;
 }
 #menubar {
   box-sizing: border-box;
@@ -10688,11 +11863,41 @@ select[multiple].celltoolbar select {
 #menubar .navbar-collapse {
   clear: left;
 }
+[dir="rtl"] #menubar .navbar-toggle {
+  float: right;
+}
+[dir="rtl"] #menubar .navbar-collapse {
+  clear: right;
+}
+[dir="rtl"] #menubar .navbar-nav {
+  float: right;
+}
+[dir="rtl"] #menubar .nav {
+  padding-right: 0px;
+}
+[dir="rtl"] #menubar .navbar-nav > li {
+  float: right;
+}
+[dir="rtl"] #menubar .navbar-right {
+  float: left !important;
+}
+[dir="rtl"] ul.dropdown-menu {
+  text-align: right;
+  left: auto;
+}
+[dir="rtl"] ul#new-menu.dropdown-menu {
+  right: auto;
+  left: 0;
+}
 .nav-wrapper {
   border-bottom: 1px solid #e7e7e7;
 }
 i.menu-icon {
   padding-top: 4px;
+}
+[dir="rtl"] i.menu-icon.pull-right {
+  float: left !important;
+  float: left;
 }
 ul#help_menu li a {
   overflow: hidden;
@@ -10700,6 +11905,17 @@ ul#help_menu li a {
 }
 ul#help_menu li a i {
   margin-right: -1.2em;
+}
+[dir="rtl"] ul#help_menu li a {
+  padding-left: 2.2em;
+}
+[dir="rtl"] ul#help_menu li a i {
+  margin-right: 0;
+  margin-left: -1.2em;
+}
+[dir="rtl"] ul#help_menu li a i.pull-right {
+  float: left !important;
+  float: left;
 }
 .dropdown-submenu {
   position: relative;
@@ -10709,6 +11925,10 @@ ul#help_menu li a i {
   left: 100%;
   margin-top: -6px;
   margin-left: -1px;
+}
+[dir="rtl"] .dropdown-submenu > .dropdown-menu {
+  right: 100%;
+  margin-right: -1px;
 }
 .dropdown-submenu:hover > .dropdown-menu {
   display: block;
@@ -10727,11 +11947,23 @@ ul#help_menu li a i {
   margin-top: 2px;
   margin-right: -10px;
 }
+.dropdown-submenu > a:after.fa-pull-left {
+  margin-right: .3em;
+}
+.dropdown-submenu > a:after.fa-pull-right {
+  margin-left: .3em;
+}
 .dropdown-submenu > a:after.pull-left {
   margin-right: .3em;
 }
 .dropdown-submenu > a:after.pull-right {
   margin-left: .3em;
+}
+[dir="rtl"] .dropdown-submenu > a:after {
+  float: left;
+  content: "\f0d9";
+  margin-right: 0;
+  margin-left: -10px;
 }
 .dropdown-submenu:hover > a:after {
   color: #262626;
@@ -10748,6 +11980,10 @@ ul#help_menu li a i {
   float: right;
   z-index: 10;
 }
+[dir="rtl"] #notification_area {
+  float: left !important;
+  float: left;
+}
 .indicator_area {
   float: right !important;
   float: right;
@@ -10758,6 +11994,10 @@ ul#help_menu li a i {
   z-index: 10;
   text-align: center;
   width: auto;
+}
+[dir="rtl"] .indicator_area {
+  float: left !important;
+  float: left;
 }
 #kernel_indicator {
   float: right !important;
@@ -10775,6 +12015,12 @@ ul#help_menu li a i {
   padding-left: 5px;
   padding-right: 5px;
 }
+[dir="rtl"] #kernel_indicator {
+  float: left !important;
+  float: left;
+  border-left: 0;
+  border-right: 1px solid;
+}
 #modal_indicator {
   float: right !important;
   float: right;
@@ -10785,6 +12031,10 @@ ul#help_menu li a i {
   z-index: 10;
   text-align: center;
   width: auto;
+}
+[dir="rtl"] #modal_indicator {
+  float: left !important;
+  float: left;
 }
 #readonly-indicator {
   float: right !important;
@@ -10815,6 +12065,12 @@ ul#help_menu li a i {
   -moz-osx-font-smoothing: grayscale;
   content: "\f040";
 }
+.edit_mode .modal_indicator:before.fa-pull-left {
+  margin-right: .3em;
+}
+.edit_mode .modal_indicator:before.fa-pull-right {
+  margin-left: .3em;
+}
 .edit_mode .modal_indicator:before.pull-left {
   margin-right: .3em;
 }
@@ -10829,6 +12085,12 @@ ul#help_menu li a i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: ' ';
+}
+.command_mode .modal_indicator:before.fa-pull-left {
+  margin-right: .3em;
+}
+.command_mode .modal_indicator:before.fa-pull-right {
+  margin-left: .3em;
 }
 .command_mode .modal_indicator:before.pull-left {
   margin-right: .3em;
@@ -10845,6 +12107,12 @@ ul#help_menu li a i {
   -moz-osx-font-smoothing: grayscale;
   content: "\f10c";
 }
+.kernel_idle_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.kernel_idle_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .kernel_idle_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -10859,6 +12127,12 @@ ul#help_menu li a i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f111";
+}
+.kernel_busy_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.kernel_busy_icon:before.fa-pull-right {
+  margin-left: .3em;
 }
 .kernel_busy_icon:before.pull-left {
   margin-right: .3em;
@@ -10875,6 +12149,12 @@ ul#help_menu li a i {
   -moz-osx-font-smoothing: grayscale;
   content: "\f1e2";
 }
+.kernel_dead_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.kernel_dead_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .kernel_dead_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -10889,6 +12169,12 @@ ul#help_menu li a i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f127";
+}
+.kernel_disconnected_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.kernel_disconnected_icon:before.fa-pull-right {
+  margin-left: .3em;
 }
 .kernel_disconnected_icon:before.pull-left {
   margin-right: .3em;
@@ -11279,27 +12565,46 @@ div#pager .ui-resizable-handle::after {
   flex: 1;
 }
 span.save_widget {
-  margin-top: 6px;
+  height: 30px;
+  margin-top: 4px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  width: 50%;
+  flex: 1;
 }
 span.save_widget span.filename {
-  height: 1em;
+  height: 100%;
   line-height: 1em;
-  padding: 3px;
   margin-left: 16px;
   border: none;
   font-size: 146.5%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
   border-radius: 2px;
 }
 span.save_widget span.filename:hover {
   background-color: #e6e6e6;
 }
+[dir="rtl"] span.save_widget.pull-left {
+  float: right !important;
+  float: right;
+}
+[dir="rtl"] span.save_widget span.filename {
+  margin-left: 0;
+  margin-right: 16px;
+}
 span.checkpoint_status,
 span.autosave_status {
   font-size: small;
+  white-space: nowrap;
+  padding: 0 5px;
 }
 @media (max-width: 767px) {
   span.save_widget {
     font-size: small;
+    padding: 0 0 0 5px;
   }
   span.checkpoint_status,
   span.autosave_status {
@@ -11343,6 +12648,9 @@ span.autosave_status {
   margin-top: 0px;
   margin-left: 5px;
 }
+.toolbar-btn-label {
+  margin-left: 6px;
+}
 #maintoolbar {
   margin-bottom: -3px;
   margin-top: -8px;
@@ -11362,6 +12670,10 @@ span.autosave_status {
 }
 .select-xs {
   height: 24px;
+}
+[dir="rtl"] .btn-group > .btn,
+.btn-group-vertical > .btn {
+  float: right;
 }
 .pulse,
 .dropdown-menu > li > a.pulse,
@@ -11512,6 +12824,10 @@ ul.typeahead-list i {
   margin-left: -10px;
   width: 18px;
 }
+[dir="rtl"] ul.typeahead-list i {
+  margin-left: 0;
+  margin-right: -10px;
+}
 ul.typeahead-list {
   max-height: 80vh;
   overflow: auto;
@@ -11520,6 +12836,13 @@ ul.typeahead-list > li > a {
   /** Firefox bug **/
   /* see https://github.com/jupyter/notebook/issues/559 */
   white-space: normal;
+}
+ul.typeahead-list  > li > a.pull-right {
+  float: left !important;
+  float: left;
+}
+[dir="rtl"] .typeahead-list {
+  text-align: right;
 }
 .cmd-palette .modal-body {
   padding: 7px;
@@ -11531,10 +12854,19 @@ ul.typeahead-list > li > a {
   outline: none;
 }
 .no-shortcut {
-  display: none;
+  min-width: 20px;
+  color: transparent;
+}
+[dir="rtl"] .no-shortcut.pull-right {
+  float: left !important;
+  float: left;
+}
+[dir="rtl"] .command-shortcut.pull-right {
+  float: left !important;
+  float: left;
 }
 .command-shortcut:before {
-  content: "(command)";
+  content: "(command mode)";
   padding-right: 3px;
   color: #777777;
 }
@@ -11543,6 +12875,10 @@ ul.typeahead-list > li > a {
   padding-right: 3px;
   color: #777777;
 }
+[dir="rtl"] .edit-shortcut.pull-right {
+  float: left !important;
+  float: left;
+}
 #find-and-replace #replace-preview .match,
 #find-and-replace #replace-preview .insert {
   background-color: #BBDEFB;
@@ -11550,6 +12886,12 @@ ul.typeahead-list > li > a {
   border-style: solid;
   border-width: 1px;
   border-radius: 0px;
+}
+[dir="ltr"] #find-and-replace .input-group-btn + .form-control {
+  border-left: none;
+}
+[dir="rtl"] #find-and-replace .input-group-btn + .form-control {
+  border-right: none;
 }
 #find-and-replace #replace-preview .replace .match {
   background-color: #FFCDD2;
@@ -11714,6 +13056,35 @@ ul.typeahead-list > li > a {
 .ansi-bold { font-weight: bold; }
 
     </style>
+<style type="text/css">
+    .CodeMirror pre { 
+    font-family: Consolas;
+    font-size: 9pt;
+}
+
+.CodeMirror-linenumber {
+    padding: 0 8px 0 4px;
+    font-family: Consolas;
+    font-size: 12px;
+}
+
+div.output_area pre {
+    font-family: Consolas;
+    margin: 0;
+    padding: 5px 10px 5px 10px;
+    vertical-align: baseline;
+    color: #303030;
+    background-color: rgba(30, 30, 30, 0.2);
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    font-size: 11px;
+}
+
+div.input_area > div.highlight > pre {
+    font-family: Consolas;
+    font-size: 9pt;
+}
+    </style>
 
 
 <style type="text/css">
@@ -11747,7 +13118,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -11772,16 +13143,14 @@ div#notebook {
     <div class="container" id="notebook-container">
 
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Home-3:-Build-a-CNN-for-image-recognition.">Home 3: Build a CNN for image recognition.<a class="anchor-link" href="#Home-3:-Build-a-CNN-for-image-recognition.">&#182;</a></h1><h3 id="Name:-[Your-Name?]">Name: [Your-Name?]<a class="anchor-link" href="#Name:-[Your-Name?]">&#182;</a></h3>
+<h1 id="Home-3:-Build-a-CNN-for-image-recognition.">Home 3: Build a CNN for image recognition.<a class="anchor-link" href="#Home-3:-Build-a-CNN-for-image-recognition.">&#182;</a></h1><h3 id="Name:-Chang-Lu">Name: Chang Lu<a class="anchor-link" href="#Name:-Chang-Lu">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="0.-You-will-do-the-following:">0. You will do the following:<a class="anchor-link" href="#0.-You-will-do-the-following:">&#182;</a></h2><ol>
 <li><p>Read, complete, and run the code.</p>
@@ -11828,16 +13197,14 @@ div#notebook {
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="1.-Data-preparation">1. Data preparation<a class="anchor-link" href="#1.-Data-preparation">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="1.1.-Load-data">1.1. Load data<a class="anchor-link" href="#1.1.-Load-data">&#182;</a></h3>
 </div>
@@ -11845,11 +13212,15 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">keras.datasets</span> <span class="k">import</span> <span class="n">cifar10</span>
 <span class="kn">import</span> <span class="nn">numpy</span>
+
+
+<span class="n">seed_value</span> <span class="o">=</span> <span class="mi">6666</span>
+<span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">seed_value</span><span class="p">)</span>
 
 <span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">),</span> <span class="p">(</span><span class="n">x_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span> <span class="o">=</span> <span class="n">cifar10</span><span class="o">.</span><span class="n">load_data</span><span class="p">()</span>
 
@@ -11860,14 +13231,35 @@ div#notebook {
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;number of classes: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">y_train</span><span class="p">)</span> <span class="o">-</span> <span class="n">numpy</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">y_train</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
 </pre></div>
 
+    </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>shape of x_train: (50000, 32, 32, 3)
+shape of y_train: (50000, 1)
+shape of x_test: (10000, 32, 32, 3)
+shape of y_test: (10000, 1)
+number of classes: 10
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="1.2.-One-hot-encode-the-labels">1.2. One-hot encode the labels<a class="anchor-link" href="#1.2.-One-hot-encode-the-labels">&#182;</a></h3><p>In the input, a label is a scalar in $\{0, 1, \cdots , 9\}$. One-hot encode transform such a scalar to a $10$-dim vector. E.g., a scalar <code>y_train[j]=3</code> is transformed to the vector <code>y_train_vec[j]=[0, 0, 0, 1, 0, 0, 0, 0, 0, 0]</code>.</p>
 <ol>
@@ -11882,12 +13274,14 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">to_one_hot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">num_class</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
-    <span class="o">&lt;</span><span class="n">fill</span> <span class="n">the</span> <span class="n">function</span><span class="o">&gt;</span>
-    <span class="o">...</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> <span class="n">num_class</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">label</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+        <span class="n">results</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">label</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.</span>
+    <span class="k">return</span> <span class="n">results</span>
 
 <span class="n">y_train_vec</span> <span class="o">=</span> <span class="n">to_one_hot</span><span class="p">(</span><span class="n">y_train</span><span class="p">)</span>
 <span class="n">y_test_vec</span> <span class="o">=</span> <span class="n">to_one_hot</span><span class="p">(</span><span class="n">y_test</span><span class="p">)</span>
@@ -11899,14 +13293,34 @@ div#notebook {
 <span class="nb">print</span><span class="p">(</span><span class="n">y_train_vec</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
 
+    </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Shape of y_train_vec: (50000, 10)
+Shape of y_test_vec: (10000, 10)
+[6]
+[0. 0. 0. 0. 0. 0. 1. 0. 0. 0.]
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Remark:-the-outputs-should-be">Remark: the outputs should be<a class="anchor-link" href="#Remark:-the-outputs-should-be">&#182;</a></h4><ul>
 <li>Shape of y_train_vec: (50000, 10)</li>
@@ -11919,8 +13333,7 @@ div#notebook {
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="1.3.-Randomly-partition-the-training-set-to-training-and-validation-sets">1.3. Randomly partition the training set to training and validation sets<a class="anchor-link" href="#1.3.-Randomly-partition-the-training-set-to-training-and-validation-sets">&#182;</a></h3><p>Randomly partition the 50K training samples to 2 sets:</p>
 <ul>
@@ -11933,7 +13346,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">rand_indices</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">permutation</span><span class="p">(</span><span class="mi">50000</span><span class="p">)</span>
@@ -11952,14 +13365,34 @@ div#notebook {
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Shape of y_val: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">y_val</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
 </pre></div>
 
+    </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Shape of x_tr: (40000, 32, 32, 3)
+Shape of y_tr: (40000, 10)
+Shape of x_val: (10000, 32, 32, 3)
+Shape of y_val: (10000, 10)
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="2.-Build-a-CNN-and-tune-its-hyper-parameters">2. Build a CNN and tune its hyper-parameters<a class="anchor-link" href="#2.-Build-a-CNN-and-tune-its-hyper-parameters">&#182;</a></h2><ol>
 <li>Build a convolutional neural network model</li>
@@ -11974,8 +13407,7 @@ div#notebook {
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Remark:">Remark:<a class="anchor-link" href="#Remark:">&#182;</a></h3><p>The following CNN is just an example. You are supposed to make <strong>substantial improvements</strong> such as:</p>
 <ul>
@@ -11989,71 +13421,461 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">keras.layers</span> <span class="k">import</span> <span class="n">Conv2D</span><span class="p">,</span> <span class="n">MaxPooling2D</span><span class="p">,</span> <span class="n">Flatten</span><span class="p">,</span> <span class="n">Dense</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">keras.layers</span> <span class="k">import</span> <span class="n">Conv2D</span><span class="p">,</span> <span class="n">MaxPooling2D</span><span class="p">,</span> <span class="n">Flatten</span><span class="p">,</span> <span class="n">Dense</span><span class="p">,</span> <span class="n">Dropout</span><span class="p">,</span> <span class="n">BatchNormalization</span><span class="p">,</span> <span class="n">Activation</span><span class="p">,</span> <span class="n">LeakyReLU</span>
 <span class="kn">from</span> <span class="nn">keras.models</span> <span class="k">import</span> <span class="n">Sequential</span>
 
 <span class="n">model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">()</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s1">&#39;same&#39;</span><span class="p">,</span> <span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">3</span><span class="p">)))</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">MaxPooling2D</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)))</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s1">&#39;same&#39;</span><span class="p">))</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">MaxPooling2D</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)))</span>
+
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">strides</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s1">&#39;same&#39;</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">3</span><span class="p">)))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">BatchNormalization</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">LeakyReLU</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">strides</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s1">&#39;same&#39;</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">BatchNormalization</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">LeakyReLU</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">strides</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s1">&#39;same&#39;</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">BatchNormalization</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">LeakyReLU</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">MaxPooling2D</span><span class="p">(</span><span class="n">pool_size</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dropout</span><span class="p">(</span><span class="mf">0.25</span><span class="p">))</span>
+
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">strides</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s1">&#39;same&#39;</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">BatchNormalization</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">LeakyReLU</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">strides</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s1">&#39;same&#39;</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">BatchNormalization</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">LeakyReLU</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">strides</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s1">&#39;same&#39;</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">BatchNormalization</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">LeakyReLU</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">MaxPooling2D</span><span class="p">(</span><span class="n">pool_size</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dropout</span><span class="p">(</span><span class="mf">0.25</span><span class="p">))</span>
+
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">strides</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s1">&#39;same&#39;</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">BatchNormalization</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">LeakyReLU</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">strides</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s1">&#39;same&#39;</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">BatchNormalization</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">LeakyReLU</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">strides</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s1">&#39;same&#39;</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">BatchNormalization</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">LeakyReLU</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">MaxPooling2D</span><span class="p">(</span><span class="n">pool_size</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dropout</span><span class="p">(</span><span class="mf">0.25</span><span class="p">))</span>
+
 <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Flatten</span><span class="p">())</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">))</span>
+
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">512</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">LeakyReLU</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">BatchNormalization</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dropout</span><span class="p">(</span><span class="mf">0.5</span><span class="p">))</span>
 <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;softmax&#39;</span><span class="p">))</span>
 
 <span class="n">model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
 </pre></div>
 
+    </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>WARNING:tensorflow:From c:\tools\python\lib\site-packages\keras\backend\tensorflow_backend.py:4070: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+Model: &#34;sequential_1&#34;
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d_1 (Conv2D)            (None, 32, 32, 32)        896       
+_________________________________________________________________
+batch_normalization_1 (Batch (None, 32, 32, 32)        96        
+_________________________________________________________________
+leaky_re_lu_1 (LeakyReLU)    (None, 32, 32, 32)        0         
+_________________________________________________________________
+conv2d_2 (Conv2D)            (None, 32, 32, 32)        9248      
+_________________________________________________________________
+batch_normalization_2 (Batch (None, 32, 32, 32)        96        
+_________________________________________________________________
+leaky_re_lu_2 (LeakyReLU)    (None, 32, 32, 32)        0         
+_________________________________________________________________
+conv2d_3 (Conv2D)            (None, 32, 32, 32)        9248      
+_________________________________________________________________
+batch_normalization_3 (Batch (None, 32, 32, 32)        96        
+_________________________________________________________________
+leaky_re_lu_3 (LeakyReLU)    (None, 32, 32, 32)        0         
+_________________________________________________________________
+max_pooling2d_1 (MaxPooling2 (None, 16, 16, 32)        0         
+_________________________________________________________________
+dropout_1 (Dropout)          (None, 16, 16, 32)        0         
+_________________________________________________________________
+conv2d_4 (Conv2D)            (None, 16, 16, 64)        18496     
+_________________________________________________________________
+batch_normalization_4 (Batch (None, 16, 16, 64)        192       
+_________________________________________________________________
+leaky_re_lu_4 (LeakyReLU)    (None, 16, 16, 64)        0         
+_________________________________________________________________
+conv2d_5 (Conv2D)            (None, 16, 16, 64)        36928     
+_________________________________________________________________
+batch_normalization_5 (Batch (None, 16, 16, 64)        192       
+_________________________________________________________________
+leaky_re_lu_5 (LeakyReLU)    (None, 16, 16, 64)        0         
+_________________________________________________________________
+conv2d_6 (Conv2D)            (None, 16, 16, 64)        36928     
+_________________________________________________________________
+batch_normalization_6 (Batch (None, 16, 16, 64)        192       
+_________________________________________________________________
+leaky_re_lu_6 (LeakyReLU)    (None, 16, 16, 64)        0         
+_________________________________________________________________
+max_pooling2d_2 (MaxPooling2 (None, 8, 8, 64)          0         
+_________________________________________________________________
+dropout_2 (Dropout)          (None, 8, 8, 64)          0         
+_________________________________________________________________
+conv2d_7 (Conv2D)            (None, 8, 8, 128)         73856     
+_________________________________________________________________
+batch_normalization_7 (Batch (None, 8, 8, 128)         384       
+_________________________________________________________________
+leaky_re_lu_7 (LeakyReLU)    (None, 8, 8, 128)         0         
+_________________________________________________________________
+conv2d_8 (Conv2D)            (None, 8, 8, 128)         147584    
+_________________________________________________________________
+batch_normalization_8 (Batch (None, 8, 8, 128)         384       
+_________________________________________________________________
+leaky_re_lu_8 (LeakyReLU)    (None, 8, 8, 128)         0         
+_________________________________________________________________
+conv2d_9 (Conv2D)            (None, 8, 8, 128)         147584    
+_________________________________________________________________
+batch_normalization_9 (Batch (None, 8, 8, 128)         384       
+_________________________________________________________________
+leaky_re_lu_9 (LeakyReLU)    (None, 8, 8, 128)         0         
+_________________________________________________________________
+max_pooling2d_3 (MaxPooling2 (None, 4, 4, 128)         0         
+_________________________________________________________________
+dropout_3 (Dropout)          (None, 4, 4, 128)         0         
+_________________________________________________________________
+flatten_1 (Flatten)          (None, 2048)              0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 512)               1049088   
+_________________________________________________________________
+leaky_re_lu_10 (LeakyReLU)   (None, 512)               0         
+_________________________________________________________________
+batch_normalization_10 (Batc (None, 512)               1536      
+_________________________________________________________________
+dropout_4 (Dropout)          (None, 512)               0         
+_________________________________________________________________
+dense_2 (Dense)              (None, 10)                5130      
+=================================================================
+Total params: 1,538,538
+Trainable params: 1,536,170
+Non-trainable params: 2,368
+_________________________________________________________________
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">keras</span> <span class="k">import</span> <span class="n">optimizers</span>
 
-<span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">1E-5</span> <span class="c1"># to be tuned!</span>
+<span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">1E-3</span> <span class="c1"># to be tuned!</span>
 
-<span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="s1">&#39;categorical_crossentropy&#39;</span><span class="p">,</span>
-              <span class="n">optimizer</span><span class="o">=</span><span class="n">optimizers</span><span class="o">.</span><span class="n">RMSprop</span><span class="p">(</span><span class="n">lr</span><span class="o">=</span><span class="n">learning_rate</span><span class="p">),</span>
-              <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;acc&#39;</span><span class="p">])</span>
+<span class="n">adam</span> <span class="o">=</span> <span class="n">optimizers</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="n">lr</span><span class="o">=</span><span class="n">learning_rate</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="s1">&#39;categorical_crossentropy&#39;</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="n">adam</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">])</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">history</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x_tr</span><span class="p">,</span> <span class="n">y_tr</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">validation_data</span><span class="o">=</span><span class="p">(</span><span class="n">x_val</span><span class="p">,</span> <span class="n">y_val</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">keras.preprocessing.image</span> <span class="k">import</span> <span class="n">ImageDataGenerator</span>
+<span class="kn">from</span> <span class="nn">keras.callbacks</span> <span class="k">import</span> <span class="n">LearningRateScheduler</span>
+
+<span class="n">datagen</span> <span class="o">=</span> <span class="n">ImageDataGenerator</span><span class="p">(</span>
+        <span class="n">featurewise_center</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">samplewise_center</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">featurewise_std_normalization</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">samplewise_std_normalization</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">zca_whitening</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">zca_epsilon</span><span class="o">=</span><span class="mf">1e-06</span><span class="p">,</span>
+        <span class="n">rotation_range</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+        <span class="n">width_shift_range</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span>
+        <span class="n">height_shift_range</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span>
+        <span class="n">shear_range</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span>
+        <span class="n">zoom_range</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span>
+        <span class="n">channel_shift_range</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span>
+        <span class="n">fill_mode</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">,</span>
+        <span class="n">cval</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span>
+        <span class="n">horizontal_flip</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">vertical_flip</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">rescale</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">preprocessing_function</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">data_format</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">validation_split</span><span class="o">=</span><span class="mf">0.0</span><span class="p">)</span>
+
+<span class="n">datagen</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x_tr</span><span class="p">)</span>
+<span class="n">history</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit_generator</span><span class="p">(</span><span class="n">datagen</span><span class="o">.</span><span class="n">flow</span><span class="p">(</span><span class="n">x_tr</span><span class="p">,</span> <span class="n">y_tr</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">128</span><span class="p">),</span>
+                        <span class="n">validation_data</span><span class="o">=</span><span class="p">(</span><span class="n">x_val</span><span class="p">,</span> <span class="n">y_val</span><span class="p">),</span>
+                        <span class="n">epochs</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+
+<span class="c1"># history = model.fit(x_tr, y_tr, batch_size=128, epochs=100, validation_data=(x_val, y_val))</span>
 </pre></div>
 
+    </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>WARNING:tensorflow:From c:\tools\python\lib\site-packages\keras\backend\tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+Epoch 1/100
+313/313 [==============================] - 12s 38ms/step - loss: 1.8971 - accuracy: 0.3747 - val_loss: 1.6116 - val_accuracy: 0.4359
+Epoch 2/100
+313/313 [==============================] - 10s 32ms/step - loss: 1.3992 - accuracy: 0.5260 - val_loss: 1.9377 - val_accuracy: 0.5023
+Epoch 3/100
+313/313 [==============================] - 10s 32ms/step - loss: 1.1690 - accuracy: 0.6034 - val_loss: 1.0023 - val_accuracy: 0.6477
+Epoch 4/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.9958 - accuracy: 0.6584 - val_loss: 0.9054 - val_accuracy: 0.6942
+Epoch 5/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.8843 - accuracy: 0.6920 - val_loss: 0.9621 - val_accuracy: 0.6715
+Epoch 6/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.8217 - accuracy: 0.7159 - val_loss: 0.7679 - val_accuracy: 0.7339
+Epoch 7/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.7573 - accuracy: 0.7393 - val_loss: 0.8043 - val_accuracy: 0.7420
+Epoch 8/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.7207 - accuracy: 0.7503 - val_loss: 0.6604 - val_accuracy: 0.7754
+Epoch 9/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.6874 - accuracy: 0.7630 - val_loss: 0.9172 - val_accuracy: 0.6990
+Epoch 10/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.6525 - accuracy: 0.7755 - val_loss: 1.0479 - val_accuracy: 0.6827
+Epoch 11/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.6262 - accuracy: 0.7837 - val_loss: 0.6528 - val_accuracy: 0.7805
+Epoch 12/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.5997 - accuracy: 0.7931 - val_loss: 0.6041 - val_accuracy: 0.7934
+Epoch 13/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.5752 - accuracy: 0.8009 - val_loss: 0.7072 - val_accuracy: 0.7685
+Epoch 14/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.5583 - accuracy: 0.8069 - val_loss: 0.5957 - val_accuracy: 0.8013
+Epoch 15/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.5441 - accuracy: 0.8120 - val_loss: 0.5504 - val_accuracy: 0.8143
+Epoch 16/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.5220 - accuracy: 0.8195 - val_loss: 0.5644 - val_accuracy: 0.8084
+Epoch 17/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.5095 - accuracy: 0.8207 - val_loss: 0.7079 - val_accuracy: 0.7874
+Epoch 18/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.4959 - accuracy: 0.8299 - val_loss: 0.5169 - val_accuracy: 0.8286
+Epoch 19/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.4739 - accuracy: 0.8364 - val_loss: 0.5737 - val_accuracy: 0.8064
+Epoch 20/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.4676 - accuracy: 0.8376 - val_loss: 0.4941 - val_accuracy: 0.8380
+Epoch 21/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.4510 - accuracy: 0.8444 - val_loss: 0.5038 - val_accuracy: 0.8323
+Epoch 22/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.4441 - accuracy: 0.8468 - val_loss: 0.7555 - val_accuracy: 0.7777
+Epoch 23/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.4357 - accuracy: 0.8491 - val_loss: 0.4742 - val_accuracy: 0.8454
+Epoch 24/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.4245 - accuracy: 0.8533 - val_loss: 0.5120 - val_accuracy: 0.8296
+Epoch 25/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.4163 - accuracy: 0.8559 - val_loss: 0.5474 - val_accuracy: 0.8242
+Epoch 26/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.4047 - accuracy: 0.8613 - val_loss: 0.4207 - val_accuracy: 0.8571
+Epoch 27/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.3982 - accuracy: 0.8610 - val_loss: 0.5229 - val_accuracy: 0.8345
+Epoch 28/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.3856 - accuracy: 0.8666 - val_loss: 0.4228 - val_accuracy: 0.86191s - loss: 0.3841 - accuracy -
+Epoch 29/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.3838 - accuracy: 0.8663 - val_loss: 0.4412 - val_accuracy: 0.8620
+Epoch 30/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.3722 - accuracy: 0.8718 - val_loss: 0.5325 - val_accuracy: 0.8360705 - accuracy:  - ETA: 0s - loss: 0.3709 - 
+Epoch 31/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.3694 - accuracy: 0.8708 - val_loss: 0.4378 - val_accuracy: 0.8595
+Epoch 32/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.3674 - accuracy: 0.8723 - val_loss: 0.4743 - val_accuracy: 0.8513
+Epoch 33/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.3507 - accuracy: 0.8803 - val_loss: 0.4693 - val_accuracy: 0.85527 - accuracy: 
+Epoch 34/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.3502 - accuracy: 0.8794 - val_loss: 0.4207 - val_accuracy: 0.8664
+Epoch 35/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.3375 - accuracy: 0.8825 - val_loss: 0.4274 - val_accuracy: 0.8621
+Epoch 36/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.3337 - accuracy: 0.8848 - val_loss: 0.3837 - val_accuracy: 0.8747
+Epoch 37/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.3287 - accuracy: 0.8849 - val_loss: 0.4415 - val_accuracy: 0.8607
+Epoch 38/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.3239 - accuracy: 0.8884 - val_loss: 0.3621 - val_accuracy: 0.8819
+Epoch 39/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.3205 - accuracy: 0.8884 - val_loss: 0.3761 - val_accuracy: 0.8760
+Epoch 40/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.3143 - accuracy: 0.8909 - val_loss: 0.4369 - val_accuracy: 0.8632
+Epoch 41/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.3127 - accuracy: 0.8912 - val_loss: 0.4155 - val_accuracy: 0.8663
+Epoch 42/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.3090 - accuracy: 0.8936 - val_loss: 0.4182 - val_accuracy: 0.8715
+Epoch 43/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.2948 - accuracy: 0.8968 - val_loss: 0.3997 - val_accuracy: 0.8747 - loss: 0.2937 - ac
+Epoch 44/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.2958 - accuracy: 0.8968 - val_loss: 0.3697 - val_accuracy: 0.8791accu - ETA -
+Epoch 45/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.2927 - accuracy: 0.8990 - val_loss: 0.3783 - val_accuracy: 0.8797
+Epoch 46/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.2907 - accuracy: 0.8983 - val_loss: 0.4716 - val_accuracy: 0.8593
+Epoch 47/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.2878 - accuracy: 0.9002 - val_loss: 0.4173 - val_accuracy: 0.8701
+Epoch 48/100
+313/313 [==============================] - 11s 35ms/step - loss: 0.2825 - accuracy: 0.9007 - val_loss: 0.4362 - val_accuracy: 0.8642
+Epoch 49/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.2721 - accuracy: 0.9068 - val_loss: 0.3835 - val_accuracy: 0.8768
+Epoch 50/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.2720 - accuracy: 0.9057 - val_loss: 0.4162 - val_accuracy: 0.8724
+Epoch 51/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.2669 - accuracy: 0.9072 - val_loss: 0.4326 - val_accuracy: 0.8698
+Epoch 52/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.2650 - accuracy: 0.9066 - val_loss: 0.4158 - val_accuracy: 0.8738: 0s - loss: 0.2647 - accuracy: 0.
+Epoch 53/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.2623 - accuracy: 0.9075 - val_loss: 0.3863 - val_accuracy: 0.8816
+Epoch 54/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.2560 - accuracy: 0.9109 - val_loss: 0.4123 - val_accuracy: 0.8705
+Epoch 55/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.2558 - accuracy: 0.9093 - val_loss: 0.4064 - val_accuracy: 0.8814
+Epoch 56/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.2527 - accuracy: 0.9118 - val_loss: 0.4247 - val_accuracy: 0.8762
+Epoch 57/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.2504 - accuracy: 0.9128 - val_loss: 0.4343 - val_accuracy: 0.8689
+Epoch 58/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.2481 - accuracy: 0.9125 - val_loss: 0.4276 - val_accuracy: 0.8742
+Epoch 59/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.2427 - accuracy: 0.9153 - val_loss: 0.3687 - val_accuracy: 0.8895
+Epoch 60/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.2434 - accuracy: 0.9154 - val_loss: 0.4434 - val_accuracy: 0.8668
+Epoch 61/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.2347 - accuracy: 0.9179 - val_loss: 0.4382 - val_accuracy: 0.8729
+Epoch 62/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.2407 - accuracy: 0.9151 - val_loss: 0.4015 - val_accuracy: 0.8813
+Epoch 63/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.2315 - accuracy: 0.9177 - val_loss: 0.3957 - val_accuracy: 0.8806
+Epoch 64/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.2332 - accuracy: 0.9173 - val_loss: 0.4168 - val_accuracy: 0.8772
+Epoch 65/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.2293 - accuracy: 0.9196 - val_loss: 0.3415 - val_accuracy: 0.8927
+Epoch 66/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.2260 - accuracy: 0.9204 - val_loss: 0.4323 - val_accuracy: 0.8713
+Epoch 67/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.2234 - accuracy: 0.9212 - val_loss: 0.3564 - val_accuracy: 0.8921
+Epoch 68/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.2249 - accuracy: 0.9216 - val_loss: 0.3753 - val_accuracy: 0.8852
+Epoch 69/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.2230 - accuracy: 0.9223 - val_loss: 0.3674 - val_accuracy: 0.8882 loss: 0.2221 - accuracy
+Epoch 70/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.2199 - accuracy: 0.9234 - val_loss: 0.3886 - val_accuracy: 0.8853
+Epoch 71/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.2154 - accuracy: 0.9241 - val_loss: 0.3662 - val_accuracy: 0.8878
+Epoch 72/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.2137 - accuracy: 0.9240 - val_loss: 0.3743 - val_accuracy: 0.8873
+Epoch 73/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.2115 - accuracy: 0.9254 - val_loss: 0.4303 - val_accuracy: 0.8780
+Epoch 74/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.2115 - accuracy: 0.9259 - val_loss: 0.3814 - val_accuracy: 0.8863
+Epoch 75/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.2083 - accuracy: 0.9279 - val_loss: 0.3832 - val_accuracy: 0.8848
+Epoch 76/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.2094 - accuracy: 0.9262 - val_loss: 0.4049 - val_accuracy: 0.8837 - loss: 0.2100 - accu - ETA: 1s - l - ETA: 1s - loss: 0.2 - ETA: 0s - loss: 0.2091 - accu
+Epoch 77/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.2129 - accuracy: 0.9253 - val_loss: 0.4395 - val_accuracy: 0.8774
+Epoch 78/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.2035 - accuracy: 0.9283 - val_loss: 0.3800 - val_accuracy: 0.8872oss: 0.2034 - accuracy: 0.
+Epoch 79/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.1971 - accuracy: 0.9321 - val_loss: 0.3902 - val_accuracy: 0.8912
+Epoch 80/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.1974 - accuracy: 0.9304 - val_loss: 0.3653 - val_accuracy: 0.8931
+Epoch 81/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.1997 - accuracy: 0.9311 - val_loss: 0.3902 - val_accuracy: 0.8879
+Epoch 82/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.1993 - accuracy: 0.9299 - val_loss: 0.4165 - val_accuracy: 0.8828
+Epoch 83/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.1922 - accuracy: 0.9309 - val_loss: 0.4489 - val_accuracy: 0.8716
+Epoch 84/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.1889 - accuracy: 0.9341 - val_loss: 0.3838 - val_accuracy: 0.8881TA: 0s - loss: 0.189
+Epoch 85/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.1904 - accuracy: 0.9330 - val_loss: 0.3294 - val_accuracy: 0.8995
+Epoch 86/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.1928 - accuracy: 0.9335 - val_loss: 0.3880 - val_accuracy: 0.8889
+Epoch 87/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.1928 - accuracy: 0.9323 - val_loss: 0.3837 - val_accuracy: 0.8921curacy: 
+Epoch 88/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.1846 - accuracy: 0.9351 - val_loss: 0.3788 - val_accuracy: 0.8909
+Epoch 89/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.1805 - accuracy: 0.9363 - val_loss: 0.3894 - val_accuracy: 0.8877
+Epoch 90/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.1880 - accuracy: 0.9344 - val_loss: 0.3592 - val_accuracy: 0.8933 -
+Epoch 91/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.1859 - accuracy: 0.9354 - val_loss: 0.4014 - val_accuracy: 0.8872
+Epoch 92/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.1829 - accuracy: 0.9360 - val_loss: 0.3736 - val_accuracy: 0.8939 - loss: 0.1808 - accuracy - ETA: 1s - loss: 0.1810 - accuracy: 0.93 - ETA: 1s - loss: 0.1814 - accuracy: 0.93 - ETA
+Epoch 93/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.1801 - accuracy: 0.9360 - val_loss: 0.3703 - val_accuracy: 0.89120. - ETA
+Epoch 94/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.1824 - accuracy: 0.9360 - val_loss: 0.3656 - val_accuracy: 0.8939
+Epoch 95/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.1789 - accuracy: 0.9359 - val_loss: 0.4129 - val_accuracy: 0.8898
+Epoch 96/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.1785 - accuracy: 0.9368 - val_loss: 0.3896 - val_accuracy: 0.8923 loss: 0.1779 
+Epoch 97/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.1740 - accuracy: 0.9394 - val_loss: 0.3953 - val_accuracy: 0.8910
+Epoch 98/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.1745 - accuracy: 0.9376 - val_loss: 0.3727 - val_accuracy: 0.8944os
+Epoch 99/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.1724 - accuracy: 0.9406 - val_loss: 0.3459 - val_accuracy: 0.8978
+Epoch 100/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.1739 - accuracy: 0.9390 - val_loss: 0.3485 - val_accuracy: 0.8974
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="o">%</span><span class="k">matplotlib</span> inline
 
-<span class="n">acc</span> <span class="o">=</span> <span class="n">history</span><span class="o">.</span><span class="n">history</span><span class="p">[</span><span class="s1">&#39;acc&#39;</span><span class="p">]</span>
-<span class="n">val_acc</span> <span class="o">=</span> <span class="n">history</span><span class="o">.</span><span class="n">history</span><span class="p">[</span><span class="s1">&#39;val_acc&#39;</span><span class="p">]</span>
+<span class="n">acc</span> <span class="o">=</span> <span class="n">history</span><span class="o">.</span><span class="n">history</span><span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">]</span>
+<span class="n">val_acc</span> <span class="o">=</span> <span class="n">history</span><span class="o">.</span><span class="n">history</span><span class="p">[</span><span class="s1">&#39;val_accuracy&#39;</span><span class="p">]</span>
 
 <span class="n">epochs</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">acc</span><span class="p">))</span>
 
@@ -12065,14 +13887,35 @@ div#notebook {
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
+    </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="3.-Train-(again)-and-evaluate-the-model">3. Train (again) and evaluate the model<a class="anchor-link" href="#3.-Train-(again)-and-evaluate-the-model">&#182;</a></h2><ul>
 <li>To this end, you have found the "best" hyper-parameters. </li>
@@ -12084,8 +13927,7 @@ div#notebook {
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="3.1.-Train-the-model-on-the-entire-training-set">3.1. Train the model on the entire training set<a class="anchor-link" href="#3.1.-Train-the-model-on-the-entire-training-set">&#182;</a></h3><p>Why? Previously, you used 40K samples for training; you wasted 10K samples for the sake of hyper-parameter tuning. Now you already know the hyper-parameters, so why not using all the 50K samples for training?</p>
 
@@ -12094,37 +13936,325 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">&lt;</span><span class="n">Compile</span> <span class="n">your</span> <span class="n">model</span> <span class="n">again</span> <span class="p">(</span><span class="n">using</span> <span class="n">the</span> <span class="n">same</span> <span class="n">hyper</span><span class="o">-</span><span class="n">parameters</span><span class="p">)</span><span class="o">&gt;</span>
-<span class="o">...</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">keras</span>
+
+
+<span class="n">keras</span><span class="o">.</span><span class="n">backend</span><span class="o">.</span><span class="n">clear_session</span><span class="p">()</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">()</span>
+
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">strides</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s1">&#39;same&#39;</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">3</span><span class="p">)))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">BatchNormalization</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">LeakyReLU</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">strides</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s1">&#39;same&#39;</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">BatchNormalization</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">LeakyReLU</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">strides</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s1">&#39;same&#39;</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">BatchNormalization</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">LeakyReLU</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">MaxPooling2D</span><span class="p">(</span><span class="n">pool_size</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dropout</span><span class="p">(</span><span class="mf">0.25</span><span class="p">))</span>
+
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">strides</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s1">&#39;same&#39;</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">BatchNormalization</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">LeakyReLU</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">strides</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s1">&#39;same&#39;</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">BatchNormalization</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">LeakyReLU</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">strides</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s1">&#39;same&#39;</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">BatchNormalization</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">LeakyReLU</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">MaxPooling2D</span><span class="p">(</span><span class="n">pool_size</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dropout</span><span class="p">(</span><span class="mf">0.25</span><span class="p">))</span>
+
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">strides</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s1">&#39;same&#39;</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">BatchNormalization</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">LeakyReLU</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">strides</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s1">&#39;same&#39;</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">BatchNormalization</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">LeakyReLU</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">strides</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s1">&#39;same&#39;</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">BatchNormalization</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">LeakyReLU</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">MaxPooling2D</span><span class="p">(</span><span class="n">pool_size</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dropout</span><span class="p">(</span><span class="mf">0.25</span><span class="p">))</span>
+
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Flatten</span><span class="p">())</span>
+
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">512</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">LeakyReLU</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">BatchNormalization</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dropout</span><span class="p">(</span><span class="mf">0.5</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;softmax&#39;</span><span class="p">))</span>
+
+<span class="n">adam</span> <span class="o">=</span> <span class="n">optimizers</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="n">lr</span><span class="o">=</span><span class="n">learning_rate</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="s1">&#39;categorical_crossentropy&#39;</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="n">adam</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">])</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">&lt;</span><span class="n">Train</span> <span class="n">your</span> <span class="n">model</span> <span class="n">on</span> <span class="n">the</span> <span class="n">entire</span> <span class="n">training</span> <span class="nb">set</span> <span class="p">(</span><span class="mi">50</span><span class="n">K</span> <span class="n">samples</span><span class="p">)</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">Use</span> <span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">y_train_vec</span><span class="p">)</span> <span class="n">instead</span> <span class="n">of</span> <span class="p">(</span><span class="n">x_tr</span><span class="p">,</span> <span class="n">y_tr</span><span class="p">)</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">Do</span> <span class="n">NOT</span> <span class="n">use</span> <span class="n">the</span> <span class="n">validation_data</span> <span class="n">option</span> <span class="p">(</span><span class="n">because</span> <span class="n">now</span> <span class="n">you</span> <span class="n">do</span> <span class="ow">not</span> <span class="n">have</span> <span class="n">validation</span> <span class="n">data</span><span class="p">)</span><span class="o">&gt;</span>
-<span class="o">...</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">datagen</span> <span class="o">=</span> <span class="n">ImageDataGenerator</span><span class="p">(</span>
+        <span class="n">featurewise_center</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">samplewise_center</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">featurewise_std_normalization</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">samplewise_std_normalization</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">zca_whitening</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">zca_epsilon</span><span class="o">=</span><span class="mf">1e-06</span><span class="p">,</span>
+        <span class="n">rotation_range</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+        <span class="n">width_shift_range</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span>
+        <span class="n">height_shift_range</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span>
+        <span class="n">shear_range</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span>
+        <span class="n">zoom_range</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span>
+        <span class="n">channel_shift_range</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span>
+        <span class="n">fill_mode</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">,</span>
+        <span class="n">cval</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span>
+        <span class="n">horizontal_flip</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">vertical_flip</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">rescale</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">preprocessing_function</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">data_format</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">validation_split</span><span class="o">=</span><span class="mf">0.0</span><span class="p">)</span>
+
+<span class="n">datagen</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x_tr</span><span class="p">)</span>
+<span class="n">history</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit_generator</span><span class="p">(</span><span class="n">datagen</span><span class="o">.</span><span class="n">flow</span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">y_train_vec</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">128</span><span class="p">),</span>
+                        <span class="n">epochs</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
 </pre></div>
 
+    </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Epoch 1/100
+391/391 [==============================] - 13s 32ms/step - loss: 1.8477 - accuracy: 0.38892s - los
+Epoch 2/100
+391/391 [==============================] - 12s 31ms/step - loss: 1.2964 - accuracy: 0.5575 - E - - ETA: 2s - loss: 1
+Epoch 3/100
+391/391 [==============================] - 12s 31ms/step - loss: 1.0476 - accuracy: 0.6425
+Epoch 4/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.9132 - accuracy: 0.6825
+Epoch 5/100
+391/391 [==============================] - 12s 32ms/step - loss: 0.8162 - accuracy: 0.7149
+Epoch 6/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.7515 - accuracy: 0.7377
+Epoch 7/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.7001 - accuracy: 0.75634s - loss: 0.7046 - ac - ETA: 3s - loss: 0.7033 - accuracy - ETA: 2s - loss: 0
+Epoch 8/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.6571 - accuracy: 0.7708
+Epoch 9/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.6292 - accuracy: 0.78233s - l - ETA:  - ETA: 0s - loss: 0.6295 - accuracy: 0.78
+Epoch 10/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.6015 - accuracy: 0.7905
+Epoch 11/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.5759 - accuracy: 0.7994
+Epoch 12/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.5522 - accuracy: 0.8090
+Epoch 13/100
+391/391 [==============================] - 12s 32ms/step - loss: 0.5354 - accuracy: 0.81377s - loss: 0.529 - ETA: 6s - loss: - ETA: 3s - loss: 0.5351 - accura
+Epoch 14/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.5175 - accuracy: 0.8200
+Epoch 15/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.5003 - accuracy: 0.82801s - loss: 0.5007 - accuracy - ETA: 1s - loss: 0.4996 - accu - ETA: 0s - loss: 0.500
+Epoch 16/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.4811 - accuracy: 0.8342
+Epoch 17/100
+391/391 [==============================] - 12s 32ms/step - loss: 0.4703 - accuracy: 0.8373
+Epoch 18/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.4571 - accuracy: 0.8416
+Epoch 19/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.4446 - accuracy: 0.84671s - loss: 0 - ETA: 0s - loss: 0.444 - ETA: 0s - loss: 0.4450 - accu
+Epoch 20/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.4391 - accuracy: 0.8468
+Epoch 21/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.4274 - accuracy: 0.85220s - loss: 0.4271 - accura
+Epoch 22/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.4137 - accuracy: 0.8561 - ETA: 3s - loss: 0 - ETA: 1s - loss: 0.4129  - ETA: 1s - loss: - ETA: 0s - loss: 0.4139 - accuracy
+Epoch 23/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.4013 - accuracy: 0.8623
+Epoch 24/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.3932 - accuracy: 0.8636
+Epoch 25/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.3887 - accuracy: 0.8653
+Epoch 26/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.3764 - accuracy: 0.86992s - l - E - ETA: 0s - loss: 0.3780 - accura - ETA: 0s - loss: 0.3769 - accuracy: 
+Epoch 27/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.3697 - accuracy: 0.87150s - loss: 0.3696 - accuracy: 0.87
+Epoch 28/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.3623 - accuracy: 0.87522s - loss: 0.358 - ETA: 1s - los - ETA: 1s
+Epoch 29/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.3578 - accuracy: 0.8753TA: 3s - loss: 0.3538 - accuracy: 0.87 - ETA: 3s - l - ETA: 2s - l - ETA: 1s - loss: 0.3551 - accura
+Epoch 30/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.3551 - accuracy: 0.87780s - loss: 0.3539 - accuracy:  - ETA: 0s - loss: 0.3530 - 
+Epoch 31/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.3426 - accuracy: 0.8827: 1s - loss: - ETA: 0s - loss: 0.3410 - ac
+Epoch 32/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.3376 - accuracy: 0.8818
+Epoch 33/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.3343 - accuracy: 0.8847
+Epoch 34/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.3297 - accuracy: 0.88580s - loss: 0.3302 - accuracy
+Epoch 35/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.3201 - accuracy: 0.88970s - loss: 0.3
+Epoch 36/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.3160 - accuracy: 0.8915
+Epoch 37/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.3111 - accuracy: 0.89330s - l
+Epoch 38/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.3070 - accuracy: 0.8949
+Epoch 39/100
+391/391 [==============================] - 12s 32ms/step - loss: 0.3031 - accuracy: 0.89520s - loss: 0.3029 - accura
+Epoch 40/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.2949 - accuracy: 0.8952
+Epoch 41/100
+391/391 [==============================] - 12s 32ms/step - loss: 0.2973 - accuracy: 0.89750s - loss: 0.2963 - ac
+Epoch 42/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.2915 - accuracy: 0.89910s - l
+Epoch 43/100
+391/391 [==============================] - 13s 32ms/step - loss: 0.2857 - accuracy: 0.9005
+Epoch 44/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.2798 - accuracy: 0.9018
+Epoch 45/100
+391/391 [==============================] - 12s 32ms/step - loss: 0.2765 - accuracy: 0.90284s - l - ETA: 3s - l - ETA: 3s - loss: 0.2772 - ac - ETA: 1s - loss: 0 - ETA: 0s - loss: 0.2770 - ac
+Epoch 46/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.2766 - accuracy: 0.90330s - loss: 0.2768 - ac
+Epoch 47/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.2639 - accuracy: 0.9083
+Epoch 48/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.2634 - accuracy: 0.90991s - l - ETA: 0s - loss: 0.2642 - accu
+Epoch 49/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.2646 - accuracy: 0.9080
+Epoch 50/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.2610 - accuracy: 0.90910s - l
+Epoch 51/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.2574 - accuracy: 0.90993s - loss: 0.2546 - ac - ETA: 3s - loss: 0.2547 - ac - ETA: 2s - loss: 0.2552 - accuracy: 0. - ETA: 2s - loss: 0.2 - ETA: 2s - loss: 0.2557 - accuracy: 0.90 - ETA: 2s - loss: 0.2555 - accuracy:  - ETA: 0s - loss: 0.2561 
+Epoch 52/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.2574 - accuracy: 0.91168s - loss: 0.2536 - ac - ETA: 4s - loss: 0.2547 -  - ETA: 4s - los - ETA: 2s - loss: 0.2 - ETA: 1s - los - ETA: 0s - loss: 0
+Epoch 53/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.2494 - accuracy: 0.9146: 10s - ETA: 0s - loss:
+Epoch 54/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.2468 - accuracy: 0.91413s - loss: 0.2424 - accuracy - ETA: 0s - loss: 0.2464 - accuracy: 0.91 - ETA: 0s - loss: 0.2468 - ac
+Epoch 55/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.2450 - accuracy: 0.91410s - loss: 0 - ETA: 0s - loss: 0.2448 - accuracy
+Epoch 56/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.2408 - accuracy: 0.91490s - loss: 0.2406 - accuracy: 
+Epoch 57/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.2413 - accuracy: 0.9159: 14s - loss: 0.2522 - accuracy: 0.917 - ETA: 13s - - ETA: 10s - loss: 0.2283 - accuracy: 0 - ETA: 9s - loss: 0.2306 - accuracy: 0. - ETA: 9s - loss: 0.2310 - accuracy:  - ETA - ETA: 6s - loss: 0.2358 - accuracy - ETA
+Epoch 58/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.2424 - accuracy: 0.9146
+Epoch 59/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.2342 - accuracy: 0.91610s - los
+Epoch 60/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.2272 - accuracy: 0.9204 ETA: 1s - loss: 0 - ETA: 0s - loss: 0.2279 - accu - ETA: 0s - loss: 0.2276 
+Epoch 61/100
+391/391 [==============================] - 12s 32ms/step - loss: 0.2334 - accuracy: 0.9190: 12s - los - ETA: 7s - loss: - ETA:  - ETA: 
+Epoch 62/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.2282 - accuracy: 0.9202
+Epoch 63/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.2255 - accuracy: 0.92021s - loss: 0.2241 - ac - ETA: 1s - loss: 0.2 - ETA: 0s - loss: 0.2
+Epoch 64/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.2258 - accuracy: 0.92082s - loss: 0.2256 - accu - ETA: 2s - loss: 0.2247 - accura - ETA: 2s - loss: 0
+Epoch 65/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.2215 - accuracy: 0.92324s - - - ETA: 
+Epoch 66/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.2227 - accuracy: 0.9220: 
+Epoch 67/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.2198 - accuracy: 0.92323s - loss: 0.2201 
+Epoch 68/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.2143 - accuracy: 0.9250
+Epoch 69/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.2146 - accuracy: 0.92530s - los
+Epoch 70/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.2106 - accuracy: 0.9256
+Epoch 71/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.2135 - accuracy: 0.92462s - loss: 0.2105  - ETA: 1s - loss: 0.2118  - ETA: 
+Epoch 72/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.2117 - accuracy: 0.92540s - loss:
+Epoch 73/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.2061 - accuracy: 0.92853s - loss: 0 - ETA - ETA: 0s - loss: 0.2066 - accu
+Epoch 74/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.2071 - accuracy: 0.9268
+Epoch 75/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.2038 - accuracy: 0.9281
+Epoch 76/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.1964 - accuracy: 0.93120s - loss: 0.1963 - accuracy: 0.
+Epoch 77/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.2031 - accuracy: 0.9290
+Epoch 78/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.1956 - accuracy: 0.93141s - loss: 0.1934 - accuracy - ETA: 
+Epoch 79/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.1981 - accuracy: 0.9306
+Epoch 80/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.1924 - accuracy: 0.9334
+Epoch 81/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.1910 - accuracy: 0.9334: 6s - l - ETA: 5s - loss: - ETA: 4s - loss:
+Epoch 82/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.1896 - accuracy: 0.9326
+Epoch 83/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.1970 - accuracy: 0.9307
+Epoch 84/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.1884 - accuracy: 0.9343
+Epoch 85/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.1881 - accuracy: 0.9341
+Epoch 86/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.1837 - accuracy: 0.93510s - loss: 0.1832 - accuracy
+Epoch 87/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.1880 - accuracy: 0.93410s - loss: 0.1882 - accuracy: 0.93
+Epoch 88/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.1840 - accuracy: 0.9364
+Epoch 89/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.1837 - accuracy: 0.9356
+Epoch 90/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.1799 - accuracy: 0.9356
+Epoch 91/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.1824 - accuracy: 0.9365
+Epoch 92/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.1794 - accuracy: 0.9369
+Epoch 93/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.1760 - accuracy: 0.93870s - loss: 0.1751  - ETA: 0s - loss: 0.1763 - accuracy
+Epoch 94/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.1773 - accuracy: 0.9373
+Epoch 95/100
+391/391 [==============================] - 13s 32ms/step - loss: 0.1758 - accuracy: 0.93790s - loss: 0.1753 - ac
+Epoch 96/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.1739 - accuracy: 0.93874s - - ETA: 3s - loss: 0.1761 -  - ETA: 2s - loss: 0.1759 - accuracy: 0. - ETA: 2s - los - ETA: 0s - loss: 0.174
+Epoch 97/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.1707 - accuracy: 0.9389
+Epoch 98/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.1662 - accuracy: 0.9425
+Epoch 99/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.1707 - accuracy: 0.9402
+Epoch 100/100
+391/391 [==============================] - 12s 31ms/step - loss: 0.1682 - accuracy: 0.9416
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="3.2.-Evaluate-the-model-on-the-test-set">3.2. Evaluate the model on the test set<a class="anchor-link" href="#3.2.-Evaluate-the-model-on-the-test-set">&#182;</a></h3><p>Do NOT used the test set until now. Make sure that your model parameters and hyper-parameters are independent of the test set.</p>
 
@@ -12133,7 +14263,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">loss_and_acc</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">x_test</span><span class="p">,</span> <span class="n">y_test_vec</span><span class="p">)</span>
@@ -12141,7 +14271,40 @@ div#notebook {
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;accuracy = &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">loss_and_acc</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
 </pre></div>
 
+    </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>10000/10000 [==============================] - 1s 116us/step
+loss = 0.4305327400714159
+accuracy = 0.887499988079071
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
 </div>
 </div>
 
