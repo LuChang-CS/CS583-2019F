@@ -99,10 +99,10 @@ We split the training data to 90\%-10\% for hyperparameter tuning. \figurename{~
 We implement the CNN model as described in the previous section. The training and validation accuracy are 99.21\% and 99.57\% respectively.
 
 \paragraph{Random Guess}
-We use a random guess method as the na\"ive baseline. For an input image, it selects a label from 0 to 9 randomly. The training and validation accuracy are 10.13\% and 9.85\% respectively.
+We use a random guess method as the na\"ive baseline. For an input image, it selects a label from 0 to 9 randomly. The training and validation accuracy are 10.13\% and 9.85\% respectively. The public score is 0.09560.
 
 \paragraph{Deep Neural Network}
-We implement a 4-hidden-layer deep neural network using Keras. The hidden unit in each layer is 512, 256, 238 and 64. We apply batch normalization in each hidden layer. The training and validation accuracy are 97.12\% and 98.82\% respectively.
+We implement a 4-hidden-layer deep neural network using Keras. The hidden unit in each layer is 512, 256, 238 and 64. We apply batch normalization in each hidden layer. The training and validation accuracy are 97.12\% and 98.82\% respectively after 50 epochs. The public score is 0.95500.
 
 \section{Outcome}
 We participated in an active competition. Our score is 0.98940 in the public leaderboard and the private score will not be available until December 17, 2019. We rank 65/947 in the public leaderboard up to November 30, 2019. The screenshots are in \figurename{~\ref{fig:rank}}.
